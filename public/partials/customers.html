@@ -1,0 +1,17 @@
+<h1>Customers</h1>
+
+
+<form>
+	<input type="text" ng-model="customer.first_name">
+	<input type="text" ng-model="customer.last_name">
+	<button ng-click="customersCtrl.create(customer)">Add Customer</button>
+</form>
+
+<li ng-repeat="error in customersCtrl.errors">
+	<span ng-bind="error.message"></span>
+</li>
+<li ng-repeat="customer in customersCtrl.customers track by $index">
+	<span ng-bind="customer.first_name"></span>
+	<span ng-bind="customer.last_name"></span>
+	<a href ng-click="customersCtrl.destroy(customer)">Delete</a>
+</li>

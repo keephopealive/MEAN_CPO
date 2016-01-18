@@ -1,0 +1,16 @@
+<h1>Products</h1>
+
+<form>
+	<input type="text" ng-model="product.title">
+	<input type="number" ng-model="product.qty">
+	<button ng-click="productsCtrl.create(product)">Add product</button>
+</form>
+
+<li ng-repeat="error in productsCtrl.errors">
+	<span ng-bind="error.message"></span>
+</li>
+<li ng-repeat="product in productsCtrl.products track by $index">
+	<span ng-bind="product.title"></span>
+	<span ng-bind="product.qty"></span>
+	<a href ng-click="productsCtrl.destroy(product)">Delete</a>
+</li>

@@ -1,0 +1,20 @@
+{
+    "name": "sample",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "latest",
+        "ejs": "latest",
+        "body-parser": "latest",
+        "socket.io": "latest",
+        "mongoose": "latest",
+        "express-session": "latest",
+        "mysql": "latest"
+    }
+}

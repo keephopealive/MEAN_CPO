@@ -1,0 +1,20 @@
+<h1>Orders</h1>
+
+<select ng-model="order.product">
+	<option ng-repeat="product in ordersCtrl.products track by $index" value="{{product}}">{{product.title}}</option>
+</select>
+
+<input type="number" ng-model="order.qty">
+
+<select ng-model="order.customer">
+	<option ng-repeat="customer in ordersCtrl.customers track by $index" value="{{customer}}">{{customer.first_name}}</option>
+</select>
+
+<button ng-click="ordersCtrl.create(order)">Create Order</button>
+
+
+<li ng-repeat="order in ordersCtrl.orders">
+	<span ng-bind="order.customer.first_name"></span>
+	<span ng-bind="order.product.title"></span>
+	<span ng-bind="order.qty"></span>
+</li>
